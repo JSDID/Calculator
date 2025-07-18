@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Online calculator - accurate calculation for free</title>
     <meta name="description" content="Online calculator. Convenient tool for quick calculation – no SMS or registration.">
-    <link rel=" stylesheet" href="styles/calc.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/calc.css">
 </head>
-
 <body>
+    <main>
+        <section id="calc" class="calc-body">
+            <section class="calc-display" aria-label="Calculator display">
+                <output class="calc-display-formula" aria-live="polite"></output>
+                <output class="calc-display-result" aria-live="polite">0</output>
+            </section>
+            <nav class="calc-memory-controls" aria-label="Memory controls">
+                <button type="button" class="calc-buttons-access-memory disabled" data-value="clear">MC</button>
+                <button type="button" class="calc-buttons-access-memory disabled" data-value="show">MR</button>
+                <button type="button" class="calc-buttons-access-memory" data-value="add">M+</button>
+                <button type="button" class="calc-buttons-access-memory" data-value="sub">M-</button>
+                <button type="button" class="calc-buttons-access-memory" data-value="save">MS</button>
+                <button type="button" class="disabled">M*</button>
+            </nav>
+            <section class="calc-buttons" aria-label="Calculator buttons">
+                <div class="calc-buttons-grid">
+                    <button type="button" class="calc-buttons-operations" data-value="%">%</button>
+                    <button type="button" class="calc-buttons-operations" data-value="sqrt">&radic;</button>
+                    <button type="button" class="calc-buttons-operations" data-value="sqr">x<sup>2</sup></button>
+                    <button type="button" class="calc-buttons-operations" data-value="1/x"><sup>1</sup>&frasl;<sub>x</sub></button>
 
-    <div id="calc"></div>
+                    <button type="button" class="calc-buttons-clear-entry">CE</button>
+                    <button type="button" class="calc-buttons-clear-data">C</button>
+                    <button type="button" class="calc-buttons-remove-digit"><img src="images/bs.png" alt="⌫"></button>
+                    <button type="button" class="calc-buttons-operations" data-value="/">&divide;</button>
 
+                    <button type="button" class="calc-buttons-numbers">7</button>
+                    <button type="button" class="calc-buttons-numbers">8</button>
+                    <button type="button" class="calc-buttons-numbers">9</button>
+                    <button type="button" class="calc-buttons-operations" data-value="*">&times;</button>
+
+                    <button type="button" class="calc-buttons-numbers">4</button>
+                    <button type="button" class="calc-buttons-numbers">5</button>
+                    <button type="button" class="calc-buttons-numbers">6</button>
+                    <button type="button" class="calc-buttons-operations" data-value="-">-</button>
+
+                    <button type="button" class="calc-buttons-numbers">1</button>
+                    <button type="button" class="calc-buttons-numbers">2</button>
+                    <button type="button" class="calc-buttons-numbers">3</button>
+                    <button type="button" class="calc-buttons-operations" data-value="+">+</button>
+
+                    <button type="button" class="calc-buttons-negate">&plusmn;</button>
+                    <button type="button" class="calc-buttons-numbers">0</button>
+                    <button type="button" class="calc-buttons-comma">,</button>
+                    <button type="button" class="calc-buttons-operations" data-value="=">=</button>
+                </div>
+            </section>
+        </section>
+    </main>
     <script src="js/calc.js"></script>
     <script src="js/main.js"></script>
-
 </body>
-
 </html>

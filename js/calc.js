@@ -3,65 +3,7 @@ class Calculator {
     constructor(id) {
         this.calcElem = document.getElementById(id);
         this.calcElem.classList.add('calc-body');
-        this.calcElem.innerHTML = '<div>\n' +
-            '        <div class="calc-display">\n' +
-            '            <div class="calc-display-formula">\n' +
-            '\n' +
-            '            </div>\n' +
-            '            <div class="calc-display-result">\n' +
-            '                0\n' +
-            '            </div>\n' +
-            '        </div>\n' +
-            '        <div class="calc-memory-controls">\n' +
-            '            <span class="calc-buttons-access-memory disabled" data-value="clear">MC</span>\n' +
-            '            <span class="calc-buttons-access-memory disabled" data-value="show">MR</span>\n' +
-            '            <span class="calc-buttons-access-memory" data-value="add">M+</span>\n' +
-            '            <span class="calc-buttons-access-memory" data-value="sub">M-</span>\n' +
-            '            <span class="calc-buttons-access-memory" data-value="save">MS</span>\n' +
-            '            <span class="disabled">M*</span>\n' +
-            '        </div>\n' +
-            '        <div class="calc-buttons">\n' +
-            '            <table>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-operations" data-value="%">%</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="sqrt">&radic;</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="sqr">x<sup>2</sup></td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="1/x"><sup>1</sup>&frasl;<sub>x</sub></td>\n' +
-            '                </tr>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-clear-entry">CE</td>\n' +
-            '                    <td class="calc-buttons-clear-data">C</td>\n' +
-            '                    <td class="calc-buttons-remove-digit"><img src="images/bs.png" alt=""></td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="/">&divide;</td>\n' +
-            '                </tr>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-numbers">7</td>\n' +
-            '                    <td class="calc-buttons-numbers">8</td>\n' +
-            '                    <td class="calc-buttons-numbers">9</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="*">&times;</td>\n' +
-            '                </tr>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-numbers">4</td>\n' +
-            '                    <td class="calc-buttons-numbers">5</td>\n' +
-            '                    <td class="calc-buttons-numbers">6</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="-">-</td>\n' +
-            '                </tr>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-numbers">1</td>\n' +
-            '                    <td class="calc-buttons-numbers">2</td>\n' +
-            '                    <td class="calc-buttons-numbers">3</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="+">+</td>\n' +
-            '                </tr>\n' +
-            '                <tr>\n' +
-            '                    <td class="calc-buttons-negate">&plusmn;</td>\n' +
-            '                    <td class="calc-buttons-numbers">0</td>\n' +
-            '                    <td class="calc-buttons-comma">,</td>\n' +
-            '                    <td class="calc-buttons-operations" data-value="=">=</td>\n' +
-            '                </tr>\n' +
-            '            </table>\n' +
-            '        </div>\n' +
-            '    </div>';
-
+        // Удаляем генерацию innerHTML, т.к. разметка теперь в HTML
         this.inputDisplay = this.calcElem.querySelector('.calc-display-result');
         this.formulaDisplay = this.calcElem.querySelector('.calc-display-formula');
         this.formula = '';
