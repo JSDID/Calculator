@@ -9,31 +9,13 @@ body {
   --button-accent-bg: #4f8cff;
   --button-accent-color: #fff;
   --border: #bfc9d8;
-  --display-color: #222;
-  --display-formula: #7a7a7a;
-  --shadow: 0 4px 24px rgba(60,60,100,0.10), 0 1.5px 4px #fff inset;
-  --shadow-inset: 0 2px 6px #bfc9d8 inset;
-  background: var(--main-bg);
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe UI', system-ui, Arial, sans-serif;
   /* Паттерн: сетка точек поверх градиента */
   position: relative;
 }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.18;
-  background-image:
-    radial-gradient(circle, #fff 1px, transparent 1.6px),
-    radial-gradient(circle, #000 1px, transparent 1.6px);
-  background-size: 32px 32px, 32px 32px;
-  background-position: 0 0, 16px 16px;
-  mix-blend-mode: lighten;
-}
+
 main, .calc-body, .calc-display, .calc-buttons, .calc-buttons-grid, .calc-memory-controls {
   position: relative;
   z-index: 1;
